@@ -18,4 +18,4 @@ Software Engineering and DevOps - May - 2024 - SoftUni
 
 ---
 
-## 1. **Software Engineering Fundamentals**
+##  **Software Engineering Fundamentals**
