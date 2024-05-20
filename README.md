@@ -12,6 +12,7 @@ Software Engineering and DevOps - May - 2024 - SoftUni
     -   [1.4.Software Construction](#14software-construction)
     -   [1.5.Software Quality Assurance](#15software-quality-assurance)
     -   [1.6.Deployment and Maintenance](#16deployment-and-maintenance)
+    -   [1.7.Summary](#17summary)
 
 2.  [DevOps Overview](#devops-overview)
 3.  [Version Control with Git](#version-control-with-git)
@@ -285,7 +286,96 @@ Software Engineering and DevOps - May - 2024 - SoftUni
 
 #### 1.5.Software Quality Assurance
 
+1. What is "software quality assurance" (SQA)?
+    - Software quality assurance aims to
+        - Minimize software defects
+        - Ensure it behaves as expected
+    - Defects are reported and tracked through a bug tracking system
+    - Performed by the Quality Assurance engineers (QA engineers)
+    - Continuous integration and delivery (CI/CD pipeline)
+2. Quality Assurance (QA) Engeneers - QA engineers ensure the software quality
+    - Plan and execute testing activities
+        - Test the software, its functionality, UX, etc.
+        - Create test plans, design test cases, execute tests
+        - Develop and execute test automation scripts
+    - Report and track bugs and their lifecycle
+        - Perform regression testing when bugs are resolved
+    - Track the development process and its quality
+        - Review the requirements, design and code
+        - Build and monitor CI/CD pipeline, track QA metrics
+3. Bugs and Bug Tracking
+    - Defects (bugs) in software are problems in the source code / requirements / design, which cause incorrect behavior
+    - Once found (typically by the QA), bugs are tracked in a bug trackers / issue tracking software.
+        - Examples: Jira, GitHub Issues
+    - Bugs have a lifecycle
+        - new → assigned / rejected → fixed → closed / reopened
+4. Test Plan, Test Scenarios and Test Cases
+    - ▪ Test plan
+        - A guiding document outlining the testing approach, environments, schedule, and acceptance criteria to ensure software meets quality requirements.
+    - Test Scenarios
+        - High-level descriptions/stories representing the functionality or feature to be tested in the software.
+    - Test Cases
+        - Detailed, step-by-step instructions designed to validate specific conditions or functions of the software based on the associated test scenarios.
+5. Manual and Automation Testing
+    - Most of the QA work is software testing
+        - Manual testing:
+            - Fill forms
+            - Click
+            - Check the results
+        - Automated testing:
+            - QA automation
+            - Test cases as code
+
 #### 1.6.Deployment and Maintenance
+
+1. What is software deployment? - Getting software out of the hands of the developers into the hands of the users. Compile, package, install, configure and run the software into the customer environment / ship the app to the customer.
+
+    - Web app → deploy the new version to the Web servers
+    - Mobile app → publish a new version to app stores
+    - Desktop app → release a new version installer to the customers
+
+2. Continuous deployment (CD) - Automatically deploy the software after each commit → ensure the changes are deployable.
+3. Deployment Environments
+   | Dev environment | Staging environment | Test environment | Production environment |
+   |------------------|--------------------|------------------|------------------------|
+   |Used by developers| Used by QA engineers and/or clients for UAT|Used by QA engineers|Used by clients|
+   |No client data |Limited production data | No client data | Full Production data|
+4. Container-Based Deployment Environments - Containers and clouds simplify creating, configuring and running the required environments
+5. Software Maintenance
+    - What is software maintenance?
+        - The process of changing a system after it has been released
+    - Reasons for maintenance changes
+        - Fixing bugs and patching security vulnerabilities
+        - Changing business needs: new features and requirements
+        - Adapting to new environments: hardware / platforms / software
+    - Typical change process
+        - Analysis → requirements → issue backlog → prioritization
+        - For each fix: design / re-engineering → code → QA → deploy
+6. Software Documentation
+    - Documentation makes software maintainable
+        - Allow new people to join the development team over the time
+    - Best practices in software documentation
+        - Visualize the development process (use a project board)
+        - Written requirements (in a requirements tracking system)
+        - Design and architecture documents (e.g., project Wiki)
+        - Code documentation (comments and built-in docs in the code)
+        - Test management system and CI system (with a dashboard)
+        - User documentation, installation guide, quick start guide, etc.
+
+#### 1.7.Summary
+
+1. **Software engineering** provides knowledge, processes, practices
+   and tools for all the phases in software development lifecycle
+   (SDLC)
+2. **Software requirements** describe the functionalities of the software
+3. **Software design and architecture** describe system structure –
+   modules and interactions
+4. **Software constructions** involves coding, debugging, unit testing,
+   code reviews and integration (including CI)
+5. The **QA engineering** process ensures the software works as
+   intended, mostly through testing (manual and automated)
+6. **Software deployment** ships the software to customers and goes
+   through different deployment environments
 
 [Back](#contents)
 
