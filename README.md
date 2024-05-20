@@ -3,9 +3,9 @@ Software Engineering and DevOps - May - 2024 - SoftUni
 
 ## Contents
 
-1. [Software Engineering Fundamentals](#1-Software-Engineering-Fundamentals)
-2. [Typography in CSS.](#2-typography-in-css)
-3. [Box Model & Positioning](#3-box-model--positioning)
+1. [Software Engineering Fundamentals](#Software-Engineering-Fundamentals)
+2. [DevOps Overview](#2)
+3. [Version Control with Git](#3)
     1. [What is Box Model?](#1-what-is-box-model)
     2. [The CSS Box Model](#2-the-css-box-model)
     3. [Position](#3-position)
