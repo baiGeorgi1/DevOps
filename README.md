@@ -14,8 +14,12 @@ Software Engineering and DevOps - May - 2024 - SoftUni
     -   [1.6.Deployment and Maintenance](#16deployment-and-maintenance)
     -   [1.7.Summary](#17summary)
 
-2.  [DevOps Overview](#devops-overview)
-3.  [Version Control with Git](#version-control-with-git)
+2.  [DevOps Overview](#2devops-overview)
+    -   [2.1.What is DevOps?](#21what-is-devops)
+    -   [2.2.DevOps Practices](#22devops-practices)
+    -   [2.3.DevOps Trends](#23devops-trends)
+    -   [2.4.Summary](#24summary)
+3.  [Version Control with Git](#3version-control-with-git)
 4.
 5.  [Automated Testing](#automated-testing)
 6.
@@ -253,7 +257,8 @@ Software Engineering and DevOps - May - 2024 - SoftUni
     -   Big bang
 
         -   All or almost all modules are integrated together at the same time
-            <img src='https://media.licdn.com/dms/image/C5112AQEuqNhVssnXpg/article-cover_image-shrink_600_2000/0/1546954191369?e=2147483647&v=beta&t=kypHLxR0eDI7cyNilaA1PSsGMRwsoKxbEidsPbvpusw' width=300px height=100px  >
+
+        <img src='https://media.licdn.com/dms/image/C5112AQEuqNhVssnXpg/article-cover_image-shrink_600_2000/0/1546954191369?e=2147483647&v=beta&t=kypHLxR0eDI7cyNilaA1PSsGMRwsoKxbEidsPbvpusw' width=300px height=100px  >
 
     <img src='https://www.guru99.com/images/1/Hybrid-Integration.png' width=300px height=130px  align="right">
 
@@ -379,9 +384,218 @@ Software Engineering and DevOps - May - 2024 - SoftUni
 
 [Back](#contents)
 
-# **DevOps Overview**
+# **2.DevOps Overview**
 
-# **Version Control with Git**
+#### 2.1.What is DevOps?
+
+> DevOps is a set of practices, tools, and philosophy that combines development (Dev) and operations (Ops) into one, continuous process.
+
+> Unites people, process, and technology in application planning, development, delivery, and operations.
+> Enables coordination and collaboration between isolated roles like development, IT operations, quality engineering, and security.
+
+1. DevOps Lifecycle - DevOps lifecycle (or pipeline) is a series of automated development processes or workflows within an iterative development lifecycle. Represents the processes, capabilities, and tools for development (left side) and operations (right side). Merging both sides into one seamless process.
+   Follows a continuous approach.
+
+<img src='https://miro.medium.com/v2/resize:fit:2000/format:webp/1*57INuyf56018l0Y_Pel0ig.png' width=600px height=250px >
+
+2. DevOps Lifecycle Stages:
+
+    - **_Plan_** - Identify business requirements and collect end-user feedback.
+    - **_Code_** - Code development.
+    - **_Build_** - Finished code is committed to a shared repository.
+    - **_Test_** - Build is deployed to a test environment and tests are performed.
+    - **_Release_** - Operations team schedules the releases or deploys multiple releases to production.
+    - **_Deploy_** - The production environment is built and the build is released.
+    - **_Operate_** - Release is live now. Operations team takes care of server configuring and provisioning.
+    - **_Monitor_** - evOps pipeline is monitored to find problems / bottlenecks.
+
+3. DevOps Pipeline Phases:
+
+    - Continuous **_Development_** - Plan and Code.
+    - Continuous **_Integration_** - Update code and add new features.
+    - Continuous **_Testing_** - Run automated or manual tests.
+    - Continuous **_Deployment_** - Code is automatically deployed on production servers.
+    - Continuous **_Feedback_** - Evaluate user experience to improve future releases.
+    - Continuous **_Monitoring_** - Monitor for system errors or performance issues.
+    - Continuous **_Operations_** - Automate launching the app and its updates.
+
+4. DevOps Tools - click the image!
+
+    [<img src='https://www.devopsschool.com/blog/wp-content/uploads/2024/01/image-302-1536x864.png' height=200px>](https://www.devopsschool.com/blog/wp-content/uploads/2024/01/image-302-1536x864.png)
+
+5. DevOps Culture - this is a collaborative approach to software development and delivery that emphasizes communication, automation, and improvement.
+
+    > Collaboration is crucial - All teams should communicate honestly and openly about DevOps
+    > processes, priorities, and concerns together.
+    >
+    > As teams align, they take ownership and become involved in other lifecycle phases, not just the ones central to their roles.
+    >
+    > DevOps teams remain agile by releasing software in short cycles.
+    >
+    > Teams strive to learn and continuously improve.
+
+6. DevOps Engeneers - they are responsible for the deployment, and maintenance of software applications.
+   Collaborate with development and operations teams. Balance a blend of soft skills with their tech knowledge. They understand development lifecycles, DevOps culture, practices and tools.
+    > The Role of DevOps Engineers - Their job and responsibilities include:
+    >
+    > - Automating processes.
+    > - Managing and maintaining the infrastructure system.
+    > - Monitoring performance.
+    > - Ensuring the security of the software.
+    > - Scale systems and ensure the availability of the services with developers.
+
+#### 2.2.DevOps Practices
+
+> Many practices, varying on the specific context and organization. Some practices are:
+>
+> -   [<img src='https://miro.medium.com/v2/resize:fit:1400/0*NXlBkHolIQvfO_Rr' width=550px height=150px align='right'>](https://miro.medium.com/v2/resize:fit:1400/0*NXlBkHolIQvfO_Rr)
+> -   CI/CD
+> -   Infrastructure as code (IaC)
+> -   Version control
+> -   Monitoring and logging
+> -   Automation
+> -   Agile software development
+
+1. **CI/CD Pipeline** - Cornerstone of DevOps describing the code journey from a developer's machine to production.
+    - Consists of multiple stages:
+        - Development;
+        - Integration;
+        - Testing;
+        - Deployment.
+    - End goal:
+        - Deliver features, updates and fixes to users quickly and reliably.
+    - CI/CD allows organizations to ship software quickly and efficiently:
+        - **Continuous integration**
+            - Developers regularly merge code changes into a central repository, which are validated by automated tests.
+        - **Continuous delivery**
+            - Code changes are automatically prepared for a release to production (and can be manually deployed).
+        - **Continuous deployment**
+            - Changes that pass all stages of production pipeline are released automatically (optional).
+    - Tools: **GitHub Actions, Jenkins, CircleCI, etc**.
+2. **Infrastructure as Code (IaC)** - Managing and provisioning of infrastructure through code instead of through manual processes. Used to automatically manage infrastructure resources:
+    - Servers
+    - Operating systems
+    - Software platforms
+    - Storage
+    - Networking
+    - Etc.
+
+-   IaC Tools - define infrastructure resources using code / config files. Can be version controlled, tested, and deployed automatically.
+    > Tools:Ansible, Puppet, Chef, Saltstack, Terraform, etc.
+
+Approaches to IaC:
+
+-   Declarative - Defines the desired state of the system, i.e. resources you need and their properties.
+-   Imperative - Defines the specific commands for the desired configuration.
+
+3. **Version Control**
+
+-   The practice of managing code in versions to make code easy to review and recover.
+-   Includes tracking revisions and change history.
+    -   Saves each individual changes in a special database.
+-   Necessary for CI/CD and IaC. - Helps enhance efficiency. - Allows preserving agility when a team grows larger.
+
+    > Tools: Git, SVN, Mercurial, etc.
+
+-   Essential for software development
+    -   Serves as a safety net to protect code
+    -   Allows several people to work on a project simultaneously
+        -   Improves collaboration and enhances development speed
+-   Manages changes in:
+    -   Code
+    -   Configurations
+    -   Infrastructure definitions
+    -   Documentation
+
+4. **Monitoring and logging**
+
+-   Monitoring means having full, real-time visibility into the health and performance of the entire application stack. - App metrics, event data, logs, traces, etc. are collected and analyzed. - Actionable and meaningful alerts are set for failures in the entire deployment pipeline. - Thus, DevOps team can mitigate issues in real time.
+
+    > Tools: ELK Stack, Splunk, Prometheus, Grafana, Alertmanager,Nagios, etc.
+
+5. **Automation**
+
+-   DevOps teams aim to automate as much of the software lifecycle as possible to have more time for writing code and developing features. - With automation the simple act of pushing code changes to a source code repository can trigger a build, test, and deployment process. - Pros: software delivery is faster, processes are consistent, predictable and scalable, teams don't perform tedious manual tasks.
+    > Tools are different for each step of the DevOps process.
+
+6. **Agile software development**
+
+[<img src='https://agilefirst.io/content/images/2022/06/agile-devops.png' width=400px height=150px align='right'>](https://agilefirst.io/content/images/2022/06/agile-devops.png)
+
+-   Agile == modern software development approach.
+-   It emphasizes on:
+    -   High adaptability to change through short release cycles;
+    -   Customer and user feedback;
+    -   Team collaboration.
+-   In DevOps, Agile practices include increased automation, improved collaboration, etc.
+
+#### 2.3.DevOps Trends
+
+1. **DevOps movement trends include:**
+
+-   Increased focus on security and compliance;
+-   Adoption of microservices architecture;
+-   Evolution of automation and AI;
+-   And many more…
+
+    They improve overall job productivity.
+
+2. **DevSecOps** = development + security + operations
+
+-   Includes DevOps framework with security as a shared responsibility
+-   Its mindset is to integrate security practices into applications and infrastructure from the start.
+-   Identifying security vulnerabilities via analysis.
+-   Tools:
+    -   Static analysis - SonarCube, Fortify , Veracode, Chekmarx.
+    -   Dynamic analysis - OWASP Zed Attack Proxy, Burp Suite, Acunetix, WebInspect.
+
+3. **DevOps** vs **DevSecOps**
+   | |DevOps | DevSecOps |
+   |--|--|--|
+   | **Focus** | Increasing quality and speed of software development and delivery |Secure software development processes by integrating security|
+   | **Process** | CI/CD | CI/CD + additional security-related processes|
+   | **Activities**|Continuous testing, development and monitoring QA tasks|Pre-commit, commit-time, build-time, test-time, deploy time checks of code|
+4. **Static** vs **Dynamic Analysis** in DevSecOps:
+   |**Static Analysis**|**Dynamic Ananlysis**|
+   |-------------------|---------------------|
+   |Used for identifying security vulnerabilities|Used for identifying security weaknesses|
+   |Analysis of the code without executing it|Analysis of the code by executing the app in real or simulated environment|
+   |Catch potential security issues early in the development stage|Detect security issuesat runtime|
+5. **Serverless Computing** - refers to outsourcing back-end cloud infrastructure and operations tasks to a cloud provider.
+
+-   Developers focus on writing code.
+-   Cloud provider manages the infrastructure, ensuring agility and scalability.
+-   Serverless computing == Function-as-a-Service (Faas)
+-   Based on event-driven execution - Allows functions to be triggered in response to specific events (changes in data or user requests, etc.)
+-   Stateless nature - Serverless functions are designed to be stateless.
+-   Wide range of tools - Frameworks, SDKs, CLIs.
+
+6. **Microservices Architecture**
+    > Microservices == architectural approach to development that breaks the application into different loosely coupled services.
+
+-   Each service focuses on a specific business capability - Can be independently developed, deployed and scaled.
+-   As everything is broken down into separate services, development teams can also be divided to tackle each service - Makes the development process more flexible.
+-   Communication between services is typically achieved through lightweight protocols, e.g., HTTP/REST.
+-   Each microservice can have its own technology stack, programming language and database - These depend on the specific business requirements.
+
+<img src='https://ncube-digest.com/wp-content/uploads/2020/04/monolithic-vs-microservice.jpg' width=750px height= 250px>
+
+7. **AIOps and MLOps**
+
+-   AIOps (Artificial Intelligence for IT Operations) refers to the use of artificial intelligence (AI) and machine learning (ML) technologies to automate and enhance various IT operations and processes.
+-   AIOps helps with identifying the main cause of the problems that hamper operational productivity.
+-   MLOps helps with optimizing operations and enhancing productivity.
+
+#### 2.4.Summary
+
+-   **DevOps** == a set of practices, tools and a cultural philosophy that automate and integrate the processes between software development and IT operations teams.
+-   8 DevOps lifecycle stages and 7 pipeline phases
+-   DevOps practices include CI/CD, Infrastructure as Code, Version Control, Monitoring and Logging, Automation, Agile Software Development, etc.
+-   DevOps trends include DevSecOps, Microservices, Serverless Computing and AIOps.
+
+[Back](#contents)
+
+# **3.Version Control with Git**
 
 # **Automated Testing**
 
